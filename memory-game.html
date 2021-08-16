@@ -1,0 +1,64 @@
+<!-- author: david corish
+operating system: windows 10
+verified working in firefox 86.0 and chrome 88.0
+references:
+boolean
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+math.floor
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+creating timer
+https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript
+javascript loop delay
+https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop/44476626
+css colours
+https://www.w3schools.com/cssref/css_colors.asp
+math.random used for picking colour each time
+https://www.w3schools.com/js/js_random.asp
+clear interval used in delaying timer start
+https://www.w3schools.com/jsref/met_win_clearinterval.asp
+for rounding to decimal place
+https://www.w3schools.com/jsref/jsref_tofixed.asp
+pushing to array
+https://www.w3schools.com/jsref/jsref_push.asp
+set timeout
+https://www.w3schools.com/jsref/met_win_settimeout.asp -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- title and importing css -->
+    <title>David's Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="memory-game.css" />
+  </head>
+  <body>
+    <!-- sets up board -->
+    <div class="game"></div>
+
+    <!-- sets up four coloured buttons -->
+    <div class="green-button">
+      <button class="green" id="1" onclick="playerClick(1);"></button>
+    </div>
+    <div class="red-button">
+      <button class="red" id="2" onclick="playerClick(2);"></button>
+    </div>
+    <div class="yellow-button">
+      <button class="yellow" id="3" onclick="playerClick(3);"></button>
+    </div>
+    <div class="blue-button">
+      <button class="blue" id="4" onclick="playerClick(4);"></button>
+    </div>
+
+    <!-- sets up start button, score, high score, game status indicator, and timer -->
+    <div class="start-button">
+      <button class="start" onclick="start();">START</button>
+    </div>
+    <div class="score" id="score" value="0">00</div>
+    <div class="high-score" id="high-score" value="0">00</div>
+    <div class="game-status" id="game-status"></div>
+    <div class="timer" id="timer" value="0">
+      Timer: If timer gets to 0, game over!
+    </div>
+    <!-- script -->
+    <script src="memory-game.js"></script>
+  </body>
+</html>
